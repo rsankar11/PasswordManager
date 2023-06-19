@@ -57,7 +57,7 @@ def save():
 def find_password():
     ws = website_entry.get().title()
     try:
-        with open("Password Manager\data.json", mode="r") as file:
+        with open("data.json", mode="r") as file:
             data = json.load(file)
     except FileNotFoundError:
         messagebox.showinfo(title="File Error", message="No data file found.")
@@ -76,7 +76,7 @@ window.title("Password Manager")
 window.config(padx=50,pady=50)
 
 canvas = Canvas(width=200, height=200)
-img = PhotoImage(file=r"Password Manager\logo.png")
+img = PhotoImage(file=r"logo.png")
 canvas.create_image(100,100, image=img)
 canvas.grid(row=0,column=1)
 
